@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -26,12 +27,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     catRenderable,cowRenderable,
     dogRenderable,elephantRenderable;
 
+
+
     ImageView bear,cat,cow,dog,elephant;
+
+    AnchorNode anchorNode;
 
     View arrayView[];
     ViewRenderable name_animal;
 
     int selected=1;
+
+    private Button btnremove;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
     arFragment=(ArFragment)getSupportFragmentManager().findFragmentById(R.id.fragment);
+
+    btnremove=(Button)findViewById(R.id.remove);
 
     //view
 
@@ -58,9 +67,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             
             arFragment.setOnTapArPlaneListener(new BaseArFragment.OnTapArPlaneListener() {
                 @Override
+
                 public void onTapPlane(HitResult hitResult, Plane plane, MotionEvent motionEvent) {
 
-                        Anchor anchor=hitResult.createAnchor();
+                    Anchor anchor=hitResult.createAnchor();
                         AnchorNode anchorNode=new AnchorNode(anchor);
                         anchorNode.setParent(arFragment.getArSceneView().getScene());
                         createModel(anchorNode,selected);
@@ -68,6 +78,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 }
             });
+btnremove.setOnClickListener(view->removeAnchorNode(anchorNode));
+    }
+
+    private void removeAnchorNode(AnchorNode anchorNode) {
+       if(anchorNode!=null){
+       arFragment.getArSceneView().getScene().removeChild(anchorNode);
+           anchorNode.getAnchor().detach();
+           anchorNode.setParent(null);
+           anchorNode=null;
+       }
+
 
     }
 
@@ -77,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setSource(this,R.raw.bear)
                 .build().thenAccept(renderable -> bearRenderable=renderable)
                 .exceptionally(throwable -> {
-                    Toast.makeText(this, "unable to load bear", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, "unable to load bear", Toast.LENGTH_LONG).show();
             return null;
     }
         );
@@ -87,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setSource(this,R.raw.cat)
                 .build().thenAccept(renderable -> catRenderable=renderable)
                 .exceptionally(throwable -> {
-                            Toast.makeText(this, "unable to load cat", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "unable to load cat", Toast.LENGTH_LONG).show();
                             return null;
                         }
                 );
@@ -97,7 +118,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setSource(this,R.raw.cow)
                 .build().thenAccept(renderable -> cowRenderable=renderable)
                 .exceptionally(throwable -> {
-                            Toast.makeText(this, "unable to load cow", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "unable to load cow", Toast.LENGTH_LONG).show();
                             return null;
                         }
                 );
@@ -108,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setSource(this,R.raw.dog)
                 .build().thenAccept(renderable -> dogRenderable=renderable)
                 .exceptionally(throwable -> {
-                            Toast.makeText(this, "unable to load dogr", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "unable to load dogr", Toast.LENGTH_LONG).show();
                             return null;
                         }
                 );
@@ -117,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .setSource(this,R.raw.elephant)
                 .build().thenAccept(renderable -> elephantRenderable=renderable)
                 .exceptionally(throwable -> {
-                            Toast.makeText(this, "unable to load elephant", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "unable to load elephant", Toast.LENGTH_LONG).show();
                             return null;
                         }
                 );
