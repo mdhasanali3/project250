@@ -135,6 +135,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
 
+      else if(selected==2)
+        {
+            TransformableNode cat=new TransformableNode(arFragment.getTransformationSystem());
+            cat.setParent(anchorNode);
+            cat.setRenderable(catRenderable);
+            cat.select();
+
+        }
+
+        else if(selected==3)
+        {
+            TransformableNode cow=new TransformableNode(arFragment.getTransformationSystem());
+            cow.setParent(anchorNode);
+            cow.setRenderable(cowRenderable);
+            cow.select();
+
+        }
+
+        else if(selected==4)
+        {
+            TransformableNode dog=new TransformableNode(arFragment.getTransformationSystem());
+            dog.setParent(anchorNode);
+            dog.setRenderable(dogRenderable);
+            dog.select();
+
+        }
+
+        else if(selected==5)
+        {
+            TransformableNode elephant=new TransformableNode(arFragment.getTransformationSystem());
+            elephant.setParent(anchorNode);
+            elephant.setRenderable(elephantRenderable);
+            elephant.select();
+
+        }
+
     }
 
     private void setClickListener() {
