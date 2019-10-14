@@ -34,6 +34,12 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+
+
 }
 
 
@@ -61,3 +67,38 @@ sceneform.asset('sample/elephant.fbx',
         'default',
         'sample/elephant.sfa',
         'src/main/res/raw/elephant')
+
+sceneform.asset('sample/chair.obj',
+        'default',
+        'sample/chair.sfa',
+        'src/main/assets/chair')
+
+sceneform.asset('sample/cloth.obj',
+        'default',
+        'sample/cloth.sfa',
+        'src/main/assets/cloth')
+
+sceneform.asset('sample/tv.obj',
+        'default',
+        'sample/tv.sfa',
+        'src/main/assets/tv')
+
+sceneform.asset('sample/table.obj',
+        'default',
+        'sample/table.sfa',
+        'src/main/assets/table')
+
+sceneform.asset('sample/room.obj',
+        'default',
+        'sample/room.sfa',
+        'src/main/assets/room')
+
+sceneform.asset('sample/model.obj',
+        'default',
+        'sample/model.sfa',
+        'src/main/assets/model')
+
+sceneform.asset('sample/lamp.obj',
+        'default',
+        'sample/lamp.sfa',
+        'src/main/assets/lamp')
