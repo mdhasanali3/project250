@@ -1,68 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <Button
-        android:id="@+id/remove"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="remove" />
 
-    <fragment
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/fragment"
-        android:name="com.google.ar.sceneform.ux.ArFragment"
-        />
-
-    <HorizontalScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/bear"
-                android:src="@drawable/bear"/>
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/cat"
-                android:src="@drawable/cat"/>
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/cow"
-                android:src="@drawable/cow"/>
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/dog"
-                android:src="@drawable/dog"/>
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/elephant"
-                android:src="@drawable/elephant"/>
-
-        </LinearLayout>
-
-
-    </HorizontalScrollView>
-
-</FrameLayout>
+        android:text="Take Screenshot"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="282dp" />
+</RelativeLayout>
