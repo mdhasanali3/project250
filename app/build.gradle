@@ -3,10 +3,10 @@ apply plugin: 'com.google.ar.sceneform.plugin'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "com.example.project250"
-        minSdkVersion 27
+        applicationId "com.example.secondar"
+        minSdkVersion 22
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -18,87 +18,70 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-
-    compileOptions{
-        sourceCompatibility '1.8'
-        targetCompatibility '1.8'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
-
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.12.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.10.0"
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support:cardview-v7:28.0.0'
 
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.1.0'
+    implementation 'androidx.navigation:navigation-ui:2.1.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 
 }
 
 
-sceneform.asset('sample/bear.fbx',
+sceneform.asset('sampleData/model.obj',
         'default',
-        'sample/bear.sfa',
-        'src/main/res/raw/bear')
-
-sceneform.asset('sample/cat.fbx',
-        'default',
-        'sample/cat.sfa',
-        'src/main/res/raw/cat')
-
-sceneform.asset('sample/cow.fbx',
-        'default',
-        'sample/cow.sfa',
-        'src/main/res/raw/cow')
-
-sceneform.asset('sample/dog.fbx',
-        'default',
-        'sample/dog.sfa',
-        'src/main/res/raw/dog')
-
-sceneform.asset('sample/elephant.fbx',
-        'default',
-        'sample/elephant.sfa',
-        'src/main/res/raw/elephant')
-
-sceneform.asset('sample/chair.obj',
-        'default',
-        'sample/chair.sfa',
-        'src/main/assets/chair')
-
-sceneform.asset('sample/cloth.obj',
-        'default',
-        'sample/cloth.sfa',
-        'src/main/assets/cloth')
-
-sceneform.asset('sample/tv.obj',
-        'default',
-        'sample/tv.sfa',
-        'src/main/assets/tv')
-
-sceneform.asset('sample/table.obj',
-        'default',
-        'sample/table.sfa',
-        'src/main/assets/table')
-
-sceneform.asset('sample/room.obj',
-        'default',
-        'sample/room.sfa',
-        'src/main/assets/room')
-
-sceneform.asset('sample/model.obj',
-        'default',
-        'sample/model.sfa',
+        'sampleData/model.sfa',
         'src/main/assets/model')
 
-sceneform.asset('sample/lamp.obj',
+sceneform.asset('sampleData/table.obj',
         'default',
-        'sample/lamp.sfa',
+        'sampleData/table.sfa',
+        'src/main/assets/table')
+
+sceneform.asset('sampleData/chair.obj',
+        'default',
+        'sampleData/chair.sfa',
+        'src/main/assets/chair')
+
+sceneform.asset('sampleData/lamp.obj',
+        'default',
+        'sampleData/lamp.sfa',
         'src/main/assets/lamp')
+
+sceneform.asset('sampleData/tv.obj',
+        'default',
+        'sampleData/tv.sfa',
+        'src/main/assets/tv')
+
+sceneform.asset('sampleData/cloth.obj',
+        'default',
+        'sampleData/cloth.sfa',
+        'src/main/assets/cloth')
+
+sceneform.asset('sampleData/room.obj',
+        'default',
+        'sampleData/room.sfa',
+        'src/main/assets/room')

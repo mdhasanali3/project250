@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">project250</string>
+    <string name="app_name">SecondAR</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>
