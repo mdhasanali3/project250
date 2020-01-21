@@ -5,8 +5,8 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.0"
     defaultConfig {
-        applicationId "com.example.secondar"
-        minSdkVersion 22
+        applicationId "com.example.project_250"
+        minSdkVersion 27
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -85,3 +85,13 @@ sceneform.asset('sampleData/room.obj',
         'default',
         'sampleData/room.sfa',
         'src/main/assets/room')
+
+
+
+
+
+
+sceneform.asset('sampleData/Hummingbird.obj',
+        'default',
+        'sampleData/Hummingbird.sfa',
+        'src/main/assets/Hummingbird')

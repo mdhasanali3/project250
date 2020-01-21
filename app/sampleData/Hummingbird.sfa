@@ -1,0 +1,43 @@
+{
+  materials: [
+    {
+      name: 'Hummingbird_Mat',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampleData/Hummingbird.obj',
+    name: 'Hummingbird',
+    recenter: 'root',
+    scale: 0.54105099999999995,
+  },
+  version: '0.54:2',
+}

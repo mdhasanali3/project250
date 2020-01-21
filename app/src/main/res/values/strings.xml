@@ -1,5 +1,29 @@
 <resources>
-    <string name="app_name">SecondAR</string>
+    <string name="app_name">room ar</string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="name_">Using the Augmented Reality(AR) Room Design application users can see
+        \nhow a furniture of
+    their choice is suitable around the room and can experience in real the actual view of the furniture
+    located in the room. This applications supports Google ArCore technology.\n
+
+
+    \n\nKey Features:\n\n
+
+    1. Select furniture from catalogue to view\n
+        \t\t\t  how it looks in your room.\n
+    2. You can also move around the \n
+        \t\t\t furniture.\n
+    3. You can also click the screenshot and\n
+        \t\t\t  save.\n
+    4. This app set the 3D depth and place \n
+        \t\t\t the object accordingly in real world.\n
+
+    \n\nDeveloper Name:
+
+        \n\n1.Jahid Hasan\nSoftware Engineering,SUST.
+        \n2.Hasan Ali\nSoftware Engineering,SUST.
+
+
+    </string>
 </resources>

@@ -9,8 +9,9 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_centerInParent="true"
-        app:cardElevation="5dp"
-        app:cardCornerRadius="4dp">
+        app:cardBackgroundColor="@android:color/holo_orange_light"
+        app:cardElevation="15dp"
+        app:cardCornerRadius="34dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -21,6 +22,7 @@
                 android:layout_height="90dp"
                 android:scaleType="centerCrop"
                 android:layout_centerHorizontal="true"
+                android:background="@android:color/transparent"
                 android:id="@+id/imageview"
                 />
 
@@ -29,6 +31,7 @@
                 android:layout_height="20dp"
                 android:text="Canada"
                 android:id="@+id/text"
+                android:textStyle="italic"
                 android:layout_below="@id/imageview"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="5dp"
