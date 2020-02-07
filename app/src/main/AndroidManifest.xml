@@ -3,10 +3,12 @@
     package="com.example.project_250">
 
     <uses-permission android:name="android.permission.CAMERA" />
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-feature android:name="android.hardware.camera.ar" android:required="true" />
+
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/images"
@@ -14,20 +16,25 @@
         android:roundIcon="@drawable/images"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.project_250.about"></activity>
-        <activity android:name="com.example.project_250.ar_class" />
 
         <meta-data
             android:name="com.google.ar.core"
             android:value="required" />
 
-        <activity android:name="com.example.project_250.MainActivity">
+        <activity android:name=".splashscreen"
+            android:theme="@style/splashscreen"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".about" ></activity>
+        <activity android:name=".ar_class" ></activity>
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme"
+            ></activity>
     </application>
 
 </manifest>

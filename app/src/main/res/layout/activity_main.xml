@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:openDrawer="start"
-    android:background="@drawable/hp"
     >
 
 
@@ -15,18 +14,125 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <ViewFlipper
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/view_fliper">
+
+                <ImageView
+                android:id="@+id/im01"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slide_01" />
+            <ImageView
+                android:id="@+id/im02"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slide_02" />
+
+
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/im2"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slide_2"
+                />
+
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/im4"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slide_4"
+                />
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/im5"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slide_5"
+                />
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:id="@+id/im3"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slide_3"
+                />
+
+        </ViewFlipper>
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/arrow"
+            android:layout_marginTop="300dp"
+            android:layout_marginLeft="310dp"
+            android:background="@drawable/btnshape"
+
+            />
+
         <Button
             android:id="@+id/btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#17A589"
-            android:text="READY"
+            android:background="@drawable/btnshape"
+            android:text="enter"
             android:textSize="40dp"
             android:textColor="#F2F3F4"
-            android:layout_marginTop="460dp"
-            android:layout_marginLeft="140dp"
+            android:layout_marginTop="500dp"
+            android:layout_marginLeft="240dp"
+            android:visibility="invisible"
+            />
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btnshape"
+            android:text="SKIP"
+            android:textSize="40dp"
+            android:textColor="#F2F3F4"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="310dp"
             />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tx1"
+            android:textSize="30dp"
+            android:textColor="#2E86C1"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tx2"
+            android:textSize="30dp"
+            android:textColor="#2E86C1"
+            android:visibility="invisible"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tx3"
+            android:textSize="30dp"
+            android:textColor="#2E86C1"
+            android:visibility="invisible"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tx4"
+            android:textSize="30dp"
+            android:textColor="#2E86C1"
+            android:visibility="invisible"
+            />
 
     </FrameLayout>
 
